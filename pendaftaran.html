@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Form Pendaftaran - Universitas AMIKOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Form Pendaftaran</h1>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="pendaftaran.html" class="nav-link active">Pendaftaran</a>
+          <a href="aboutus.html" class="nav-link">About Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card form-card">
+        <h2>Form Pendaftaran Mahasiswa Baru</h2>
+        <form id="registrationForm" enctype="multipart/form-data" novalidate>
+          <div class="form-row">
+            <label for="fullname">Nama Lengkap *</label>
+            <input type="text" id="fullname" name="fullname" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-row">
+            <label>Jenis Kelamin *</label>
+            <div class="inline-group">
+              <label><input type="radio" name="gender" value="L" required /> Laki-laki</label>
+              <label><input type="radio" name="gender" value="P" /> Perempuan</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Program Minat *</label>
+            <div class="inline-group">
+              <label><input type="checkbox" name="program[]" value="TI" /> Teknik Informatika</label>
+              <label><input type="checkbox" name="program[]" value="SI" /> Sistem Informasi</label>
+              <label><input type="checkbox" name="program[]" value="TK" /> Teknik Komputer</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="prodi">Pilihan Prodi *</label>
+            <select id="prodi" name="prodi" required>
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="S1-SI">S1 Sistem Informasi</option>
+              <option value="D3-TK">D3 Teknik Komputer</option>
+              <option value="S1-TI">S1 Teknik Informatika</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="photo">Upload Foto / Berkas (max 2MB) *</label>
+            <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.pdf" required />
+          </div>
+
+          <div class="form-row">
+            <label for="notes">Catatan (opsional)</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Kirim Pendaftaran</button>
+            <a class="btn" href="index.html">Menu Beranda</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Aron Steven Limbong</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
